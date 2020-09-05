@@ -1,0 +1,23 @@
+{
+  "name": "pimenvibritania/password-stretcher",
+  "description": "Passwords are \"hashed\" with PBKDF2",
+  "keywords": [
+    "password", "encrypt", "decrypt", "encryption", "decryption",
+    "cbc", "php", "hash", "pbkdf2"
+  ],
+  "homepage": "https://github.com/pimenvibritania/password-stretcher",
+  "type": "library",
+  "authors": [
+    {
+      "name": "pimenvibritania",
+      "email": "pimenvibritania@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
