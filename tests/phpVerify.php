@@ -27,6 +27,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+use pimenvibritania\PasswordStretcher\CannotPerformOperationException;
+use pimenvibritania\PasswordStretcher\InvalidHashException;
+use pimenvibritania\PasswordStretcher\PasswordStorage;
+
 require_once 'PasswordStorage.php';
 
 if ($argc != 3 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
@@ -42,7 +46,6 @@ function verifyTestHash($password, $hash)
         $testResult = PasswordStorage::verify_password($password, $hash);
         var_dump($testResult);
     } catch (InvalidHashException $ex) {
-        echo "WRONG HASH";
         exit(1);
     } catch (CannotPerformOperationException $ex) {
         echo "STUPID!";
@@ -53,7 +56,6 @@ function verifyTestHash($password, $hash)
         echo "GOOD JOB";
         exit(0);
     } else {
-        echo "SAD BOY!";
         exit(1);
     }
 }

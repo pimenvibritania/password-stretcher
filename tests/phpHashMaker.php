@@ -1,5 +1,7 @@
 <?php
 
+use pimenvibritania\PasswordStretcher\PasswordStorage;
+
 require_once 'PasswordStorage.php';
 
 // At the end is "WHITE SMILING FACE", in UTF-8, which fits into a single UTF-16
