@@ -31,7 +31,7 @@ use pimenvibritania\PasswordStretcher\CannotPerformOperationException;
 use pimenvibritania\PasswordStretcher\InvalidHashException;
 use pimenvibritania\PasswordStretcher\PasswordStorage;
 
-require_once 'PasswordStorage.php';
+require_once 'src/PasswordStorage.php';
 
 if ($argc != 3 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
     echo "Usage: php $argv[0] <password> <hash>\n";

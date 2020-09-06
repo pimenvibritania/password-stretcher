@@ -1,8 +1,8 @@
 <?php
 
-use pimenvibritania\PasswordStretcher\PasswordStorage;
+namespace pimenvibritania\PasswordStretcher;
 
-require_once 'PasswordStorage.php';
+require_once 'src/PasswordStorage.php';
 
 // At the end is "WHITE SMILING FACE", in UTF-8, which fits into a single UTF-16
 // character, allowing implementations to compare against the length.

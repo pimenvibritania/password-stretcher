@@ -39,12 +39,14 @@ class PasswordStorage
         if (\function_exists('random_bytes')) {
             try {
                 $salt_raw = \random_bytes(self::PBKDF2_SALT_BYTES);
+                var_dump("1->".$salt_raw);
             } catch (Error $e) {
                 $salt_raw = false;
             } catch (Exception $e) {
             }
         } else {
             $salt_raw = @\mcrypt_create_iv(self::PBKDF2_SALT_BYTES, MCRYPT_DEV_URANDOM);
+            var_dump("2->".$salt_raw);
         }
         if ($salt_raw === false) {
             throw new CannotPerformOperationException(
@@ -265,6 +267,7 @@ class PasswordStorage
      *
      * @param string $str
      * @return int
+     * @throws CannotPerformOperationException
      */
     private static function ourStrlen($str)
     {
